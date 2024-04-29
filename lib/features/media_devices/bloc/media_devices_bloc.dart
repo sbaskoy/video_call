@@ -71,13 +71,13 @@ class MediaDevicesBloc extends Bloc<MediaDevicesEvent, MediaDevicesState> {
       MediaDeviceInfo? selectedAudioOutput;
       MediaDeviceInfo? selectedVideoInput;
       if (audioInputs.isNotEmpty) {
-        selectedAudioInput = audioInputs.first;
+        selectedAudioInput = audioInputs.last;
       }
       if (audioOutputs.isNotEmpty) {
-        selectedAudioOutput = audioOutputs.first;
+        selectedAudioOutput = audioOutputs.last;
       }
       if (videoInputs.isNotEmpty) {
-        selectedVideoInput = videoInputs.first;
+        selectedVideoInput = videoInputs.last;
       }
 
       yield MediaDevicesLoadedState(
